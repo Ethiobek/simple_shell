@@ -1,60 +1,47 @@
-# ALX School Project: simple_shell
-## Table of Contents
-* [Description](#description)
-* [Requirements](#requirements)
-* [Installation](#installation)
-* [Usage](#usage)
-* [Authors](#authors)
+# Bereket Manargo and Audrey Tahwa Shell
 
-## Description
-Simple_shell is a command line interpreter, or shell, made by us in the tradition of the first Unix shell written by Ken Thompson in 1971. This shell is
-intentionally minimalistic, was made in order to practice the basics of C learning, yet includes the basic functionality of a traditional Unix-like command line user interface.
-Standard functions and system calls employed in simple_shell include:
-	 `access, execve, exit, fork, free, fstat, getline, malloc, perror, signal, stat, wait, write.`
+![alt text](https://s3.amazonaws.com/intranet-projects-files/holbertonschool-low_level_programming/235/shell.jpeg)
 
-## Requirements:wq:
-simple_shell is designed to run in the Ubuntu linux environment and to be compiled using the GNU compiler collection v. `gcc 4.8.4` with flags`-Wall, -Werror, -Wextra, and -pedantic.`
+### Description
 
-## Installation
+ Bereket Manarg and Audrey Tahwa Shell is a simple UNIX command interpreter that replicates functionalities of the simple shell (sh). Additional functions are also included. This program was written entirely in C as a milestone project for ALX Africa Software Engineering.
 
-	 - Clone this repository: `https://github.com/dev-amara/simple_shell.git`.
-	 - Change directories into the repository: `cd simple_shell`
-	 - Compile: `gcc -Wall -Werror -Wextra -pedantic *.c -o hsh`
-	 - Run the shell in interactive mode: `./hsh`
-	 - Or run the shell in non-interactive mode: example `echo "pwd" | ./hsh`
+### Installation
 
-## Usage
+Clone this repository into your working directory. For best results, files should be compiled with GCC and the following flags: -Wall -Wextra -Werror -pedantic -std=gnu89
 
-The simple_shell is designed to execute commands in a similar manner to sh, however with more limited functionality. The development of this shell is ongoing. The below features will be checked as they become available (see man page for complete information on usage):
+### Usage
 
-### Features
-- [x] uses the PATH
-- [x] implements builtins
-- [x] handles command line arguments
-- [x] custom strtok function
-- [x] uses exit status
-- [x] shell continues upon Crtl+C (**^C**)
-- [x] handles comments (#)
-- [x] handles **;**
-- [ ] custom getline type function
-- [ ] handles **&&** and **||**
-- [ ] aliases
-- [ ] variable replacement
+After compilation, the resulting program can run stand-alone, either in interactive or non-interactive mode.
 
+#### Interactive Mode
 
-### Builtins
+In interactive mode, simply run the program and wait for the prompt to appear. From there, you can type commands freely, exiting with either the "exit" command or ctrl-D.
 
-- [x] exit
-- [x] env
-- [x] setenv
-- [x] unsetenv
-- [x] cd
-- [x] help
-- [x] history
+#### Non-Interactive Mode
 
-## Author
-Abudi Seid | [GitHub](https://github.com/Abudi-seid10)
+In non-interactive mode, echo your desired command and pipe it into the program like this:
+
+```sh
+echo "ls" | ./shell
+```
+
+In non-interactive mode, the program will exit after finishing your desired command(s).
+
+#### Included Built-Ins
+
+Our shell has support for the following built-in commands:
+
+| Command             | Definition                                                                                |
+| ------------------- | ----------------------------------------------------------------------------------------- |
+| exit [n]            | Exit the shell, with an optional exit status, n.                                          |
+| env                 | Print the environment.                                                                    |
+| setenv [var][value] | Set an environment variable and value. If the variable exists, the value will be updated. |
+| unsetenv [var]      | Remove an environment variable.                                                           |
+| cd [dir]            | Change the directory.                                                                     |
+| help [built-in]     | Read documentation for a built-in.                                                        |
 
 
-## License
-simple_shell is open source and therefore free to download and use without permission.
+### Credits
+
+All code written by Bereket Manarg and Audrey Tahwa Shell
